@@ -807,7 +807,7 @@ class GenericTableView(QTableView):
                 break
 
         if idx is None:
-            idx = self.model().createIndex(self.maxRowsInViewport-1, self.trackingCol, internalId)
+            idx = self.model().createIndex(self.maxRowsInViewport-1, self.trackingCol, 0)
         self.selectionModel().setCurrentIndex(
             idx,
             QItemSelectionModel.SelectionFlag.Rows | QItemSelectionModel.SelectionFlag.SelectCurrent
